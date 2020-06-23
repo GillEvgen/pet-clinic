@@ -8,7 +8,7 @@ import java.time.LocalDate;
 public class Pet extends BaseEntity{
 
     @ManyToOne
-    @JoinColumn(name = "type_ig")
+    @JoinColumn(name = "type_id")
     private PetType petType;
 
     @ManyToOne
