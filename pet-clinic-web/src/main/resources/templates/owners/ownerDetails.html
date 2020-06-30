@@ -12,26 +12,26 @@
 <table class="table table-striped" th:object="${owner}">
     <tr>
         <th>Name</th>
-        <td><b th:text="*{firstName + ' ' + lastName}"></b></td>
+        <td><b th:text="*{getFirstName() + ' ' + getLastName()}"></b></td>
     </tr>
     <tr>
         <th>Address</th>
-        <td th:text="*{address}"/>
+        <td th:text="*{getAddress()}"/>
         </td>
     </tr>
     <tr>
         <th>City</th>
-        <td th:text="*{city}"/>
+        <td th:text="*{getCity()}"/>
         </td>
     </tr>
     <tr>
         <th>Telephone</th>
-        <td th:text="*{telephone}"/>
+        <td th:text="*{getTelephone()}"/>
         </td>
     </tr>
 </table>
 
-<a th:href="@{{id}/edit(id=${owner.getId()})}" class="btn btn-default">Edit
+<a th:href="@{{ig}/edit(id=${owner.getId()})}" class="btn btn-default">Edit
     Owner</a>
 <a th:href="@{{id}/pets/new(id=${owner.getId()})}" class="btn btn-default">Add
     New Pet</a>
